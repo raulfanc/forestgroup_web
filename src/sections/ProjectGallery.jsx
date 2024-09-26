@@ -1,54 +1,49 @@
 import React from "react";
-
+import {
+  background3,
+  background4,
+  background5,
+  background6,
+  background7,
+  background8,
+  background9,
+  background10,
+  background11,
+  background12,
+  background13,
+  background14,
+  background15,
+  background16,
+  background17,
+  background18,
+  background19,
+  background20,
+} from "../assets/images";
 // Assuming images are available with consistent naming
 const projects = [
   {
     title: "Demolition",
-    images: [
-      "./src/assets/images/background3.png",
-      "./src/assets/images/background4.png",
-      "./src/assets/images/background5.png",
-    ],
+    images: [background3, background4, background5],
   },
   {
     title: "Earthworks",
-    images: [
-      "./src/assets/images/background6.png",
-      "./src/assets/images/background7.png",
-      "./src/assets/images/background8.png",
-    ],
+    images: [background6, background7, background8],
   },
   {
     title: "Drainage",
-    images: [
-      "./src/assets/images/background10.png",
-      "./src/assets/images/background11.png",
-      "./src/assets/images/background9.png",
-    ],
+    images: [background10, background11, background9],
   },
   {
     title: "Retaining Wall",
-    images: [
-      "./src/assets/images/background14.png",
-      "./src/assets/images/background13.png",
-      "./src/assets/images/background12.png",
-    ],
+    images: [background14, background13, background12],
   },
   {
     title: "All-in-one Service",
-    images: [
-      "./src/assets/images/background16.png",
-      "./src/assets/images/background17.png",
-      "./src/assets/images/background15.png",
-    ],
+    images: [background16, background17, background15],
   },
   {
     title: "Common Accessway",
-    images: [
-      "./src/assets/images/background19.png",
-      "./src/assets/images/background20.png",
-      "./src/assets/images/background18.png",
-    ],
+    images: [background19, background20, background18],
   },
 ];
 
