@@ -10,5 +10,4 @@ export const navLinks = [
   { href: "/about-us", label: "About Us", component: AboutUs },
   { href: "/projects", label: "Projects", component: Projects },
   { href: "/contact-us", label: "Contact Us", component: ContactUs },
-  { href: "*", label: "Home", component: HomePage },
 ];
