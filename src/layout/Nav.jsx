@@ -15,7 +15,7 @@ const Nav = () => {
   return (
     <header className="fixed z-10 w-full">
       <nav className="grid grid-cols-5 items-center">
-        <div className="col-span-1 bg-white flex items-center justify-center p-2">
+        <div className="col-span-1  h-full bg-white flex items-center justify-center p-2">
           <NavLink to="/">
             <img src={logo} alt="Logo" width={120} height={40} />
           </NavLink>

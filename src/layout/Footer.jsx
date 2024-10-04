@@ -4,9 +4,11 @@ const Footer = () => {
   return (
     <footer className="bg-gray-800 text-white py-6">
       <div className="max-w-screen-xl mx-auto px-4">
-        <div className="flex justify-between items-start">
-          <div className="flex flex-col space-y-2">
-            <h3 className="text-2xl font-bold mb-4">Contact Us</h3>
+        {/* 使用 grid 布局，小屏幕上下排列，大屏幕左右排列 */}
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+          {/* 左侧：联系方式 */}
+          <div className="flex flex-col space-y-4">
+            <h3 className="text-2xl font-bold">Contact Us</h3>
             <div className="flex items-center">
               <span className="mr-2 text-lg">📧</span>
               <a
@@ -30,6 +32,7 @@ const Footer = () => {
             </div>
           </div>
 
+          {/* 右侧：公司信息 */}
           <div className="flex flex-col items-center text-center">
             <h2 className="text-3xl font-bold">Forest Group</h2>
             <p className="text-md text-gray-400">
