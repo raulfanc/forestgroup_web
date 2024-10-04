@@ -4,8 +4,7 @@ export default {
   theme: {
     extend: {
       fontFamily: {
-        montserrat: ["Montserrat", "sans-serif"],
-        palanquin: ["Palanquin", "sans-serif"],
+        sans: ["Arial", "Roboto", "Montserrat", "Palanquin", "sans-serif"],
       },
       animation: {
         fadeInOut: "fadeInOut 10s ease-in-out infinite",

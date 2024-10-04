@@ -17,7 +17,7 @@ const truncateText = (text, maxLength = 500) => {
   return text;
 };
 
-const PopularProducts = () => {
+const Comments = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
 
   useEffect(() => {
@@ -48,4 +48,4 @@ const PopularProducts = () => {
   );
 };
 
-export default PopularProducts;
+export default Comments;

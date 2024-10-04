@@ -1,5 +1,4 @@
-import Hero from "./Hero";
-import PopularProducts from "./PopularProducts";
+import Comments from "./Comments";
 import Footer from "../layout/Footer";
 import Background from "./Background";
 import Services from "./Services";
@@ -8,8 +7,7 @@ import Subscribe from "./CapabilitiesDetails";
 import SuperQuality from "./ProjectGallery";
 
 export {
-  Hero,
-  PopularProducts,
+  Comments,
   Footer,
   Background,
   Services,

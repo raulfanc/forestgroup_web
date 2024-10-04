@@ -15,7 +15,7 @@ const EmailForm = () => {
 
   const handleChange = (e) => {
     const { name, value } = e.target;
-    setFormData({ ...formData, [name]: value }); // 确保更新状态
+    setFormData({ ...formData, [name]: value });
   };
 
   const handleOnSubmit = (e) => {
@@ -44,80 +44,85 @@ const EmailForm = () => {
   };
 
   return (
-    <div className="min-h-screen flex items-center justify-center bg-gray-100">
-      <form
-        className="bg-white p-8 rounded-lg shadow-lg max-w-lg w-full space-y-6"
-        onSubmit={handleOnSubmit}
-      >
-        <h2 className="text-2xl font-bold text-gray-800 text-center mb-4">
-          Send me a message. Let's have a chat!
+    <div className="mt-9 flex items-center justify-center bg-gray-100">
+      <div className="max-w-lg w-full">
+        <h2 className="text-3xl font-bold text-[#354a64] text-center mb-4">
+          Contact Us
         </h2>
-
-        <div className="flex space-x-4">
-          <div className="flex flex-col w-1/2">
-            <label className="text-gray-700 font-semibold">First Name</label>
-            <input
-              type="text"
-              name="firstName"
-              autoComplete="off"
-              value={formData.firstName}
-              onChange={handleChange}
-              placeholder="Your first name..."
-              required
-              className="p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-400"
-            />
-          </div>
-          <div className="flex flex-col w-1/2">
-            <label className="text-gray-700 font-semibold">Last Name</label>
-            <input
-              type="text"
-              name="lastName"
-              autoComplete="off"
-              value={formData.lastName}
-              onChange={handleChange}
-              placeholder="Your last name..."
-              required
-              className="p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-400"
-            />
-          </div>
-        </div>
-
-        <div className="flex flex-col">
-          <label className="text-gray-700 font-semibold">Email</label>
-          <input
-            type="email"
-            name="from_email"
-            value={formData.from_email}
-            onChange={handleChange}
-            autoComplete="off"
-            placeholder="Your email..."
-            required
-            className="p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-400"
-          />
-        </div>
-
-        <div className="flex flex-col">
-          <label className="text-gray-700 font-semibold">Message</label>
-          <textarea
-            name="message"
-            rows="5"
-            value={formData.message}
-            onChange={handleChange}
-            placeholder="Your message..."
-            required
-            className="p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-400 resize-none"
-          ></textarea>
-        </div>
-
-        <input type="hidden" name="from_name" />
-
-        <button
-          type="submit"
-          className="w-full bg-indigo-600 text-white font-semibold py-3 rounded-lg hover:bg-indigo-700 transition-colors"
+        <form
+          className="bg-white p-8 rounded-lg shadow-lg space-y-6"
+          onSubmit={handleOnSubmit}
         >
-          Submit
-        </button>
-      </form>
+          <h2 className="text-2xl font-bold text-gray-800 text-center mb-4">
+            Send me a message. Let's have a chat!
+          </h2>
+
+          <div className="flex space-x-4">
+            <div className="flex flex-col w-1/2">
+              <label className="text-gray-700 font-semibold">First Name</label>
+              <input
+                type="text"
+                name="firstName"
+                autoComplete="off"
+                value={formData.firstName}
+                onChange={handleChange}
+                placeholder="Your first name..."
+                required
+                className="p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-400"
+              />
+            </div>
+            <div className="flex flex-col w-1/2">
+              <label className="text-gray-700 font-semibold">Last Name</label>
+              <input
+                type="text"
+                name="lastName"
+                autoComplete="off"
+                value={formData.lastName}
+                onChange={handleChange}
+                placeholder="Your last name..."
+                required
+                className="p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-400"
+              />
+            </div>
+          </div>
+
+          <div className="flex flex-col">
+            <label className="text-gray-700 font-semibold">Email</label>
+            <input
+              type="email"
+              name="from_email"
+              value={formData.from_email}
+              onChange={handleChange}
+              autoComplete="off"
+              placeholder="Your email..."
+              required
+              className="p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-400"
+            />
+          </div>
+
+          <div className="flex flex-col">
+            <label className="text-gray-700 font-semibold">Message</label>
+            <textarea
+              name="message"
+              rows="5"
+              value={formData.message}
+              onChange={handleChange}
+              placeholder="Your message..."
+              required
+              className="p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-400 resize-none"
+            ></textarea>
+          </div>
+
+          <input type="hidden" name="from_name" />
+
+          <button
+            type="submit"
+            className="w-full bg-indigo-600 text-white font-semibold py-3 rounded-lg hover:bg-indigo-700 transition-colors"
+          >
+            Submit
+          </button>
+        </form>
+      </div>
     </div>
   );
 };

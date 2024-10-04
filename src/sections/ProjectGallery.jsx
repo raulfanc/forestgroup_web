@@ -51,7 +51,7 @@ const ProjectGallery = () => {
   return (
     <div className="bg-gray-100 min-h-screen py-8">
       <div className="max-w-7xl mx-auto px-4">
-        <h1 className="text-4xl font-bold text-center text-gray-800 mb-12">
+        <h1 className="text-4xl font-bold text-center text-[#354a64] mb-12">
           Our Projects
         </h1>
         {projects.map((project, index) => (
@@ -67,7 +67,7 @@ const ProjectGallery = () => {
                 >
                   <img
                     src={image}
-                    alt={`Project ${project.title} Image ${idx + 1}`}
+                    alt={`image.png`}
                     className="object-cover w-full h-48"
                   />
                 </div>
