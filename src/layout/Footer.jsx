@@ -41,6 +41,9 @@ const Footer = () => {
               <span className="text-gray-300 text-lg">0220899308</span>
               <span className="mx-2 text-gray-300 text-lg">|</span>
               <span className="text-gray-300 text-lg">0211065271</span>
+              <span className="ml-2 text-gray-300 text-lg font-semibold">
+                Contact: Shawn Fei
+              </span>
             </div>
           </div>
         </div>
