@@ -22,3 +22,8 @@ run: npm run dev
 10. contact us, add: company email, shawn's phone number, shawn's contact name (considering to move this to footer) //done
 
 11. `About Us`, pending design for the map section.(need to confirm the final ui design with client) //done
+
+
+## resources
+videos download: https://www.pexels.com/
+

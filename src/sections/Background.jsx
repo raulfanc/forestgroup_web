@@ -1,29 +1,21 @@
-import React, { useEffect, useState } from "react";
-import { background2 } from "../assets/images";
+import React from "react";
+import videoBackground from "../assets/videos/background2.mp4"; // Assuming your video is saved in this path
 
 const Background = ({ content }) => {
-  const backgrounds = [background2];
-  const [currentImageIndex, setCurrentImageIndex] = useState(0);
-
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setCurrentImageIndex((prevIndex) =>
-        prevIndex === backgrounds.length - 1 ? 0 : prevIndex + 1
-      );
-    }, 5000);
-
-    return () => clearInterval(interval);
-  }, [backgrounds.length]);
   return (
-    <section className="relative mt-20 w-full h-[500px] ">
-      <div
-        className="absolute inset-0 bg-cover bg-center transition-opacity duration-1000"
-        style={{
-          backgroundImage: `url(${backgrounds[currentImageIndex]})`,
-        }}
+    <section className="relative mt-20 w-full h-[500px] overflow-hidden">
+      {/* Video Background */}
+      <video
+        className="absolute inset-0 w-full h-full object-cover"
+        src={videoBackground}
+        autoPlay
+        loop
+        muted
+        playsInline
       />
-      {/* <div className="absolute inset-0 bg-blue-600 bg-opacity-50" /> */}
-      <div className="relative z-4 h-full text-white flex justify-center lg:justify-start">
+
+      {/* Content Over the Video */}
+      <div className="relative z-4 h-full text-white flex items-center justify-center lg:justify-start px-8">
         {content && content}
       </div>
     </section>
