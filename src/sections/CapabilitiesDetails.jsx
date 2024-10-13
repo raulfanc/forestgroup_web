@@ -34,7 +34,7 @@ const CapabilitiesDetails = () => {
   ];
 
   return (
-    <div className="h-auto bg-gray-100 py-12">
+    <div className="h-auto bg-[#FFFFFF] py-12">
       <div className="max-w-6xl mx-auto px-4">
         <h2 className="text-4xl font-bold text-center text-[#354a64] mb-16">
           Our Capabilities

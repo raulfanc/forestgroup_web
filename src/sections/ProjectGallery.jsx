@@ -49,7 +49,7 @@ const projects = [
 
 const ProjectGallery = () => {
   return (
-    <div className="bg-gray-100 min-h-screen py-8">
+    <div className="bg-pale-800 min-h-screen py-8">
       <div className="max-w-7xl mx-auto px-4">
         <h1 className="text-4xl font-bold text-center text-[#354a64] mb-12">
           Our Projects

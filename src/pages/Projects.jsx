@@ -5,7 +5,7 @@ import ProjectGallery from "../sections/ProjectGallery";
 const Projects = () => {
   return (
     <Layout>
-      <section className=" xl:padding-1 wide:padding-r padding-b pt-1">
+      <section className=" xl:padding-1 wide:padding-r padding-b pt-1 bg-pale-800">
         <Background />
         <ProjectGallery />
       </section>

@@ -21,7 +21,7 @@ const Nav = () => {
           </NavLink>
         </div>
 
-        <div className="col-span-4 h-full bg-[#354a64] text-white flex items-center justify-end p-6 space-x-4">
+        <div className="col-span-4 h-full bg-[#1E2D3B] text-white flex items-center justify-end p-6 space-x-4">
           <ul className="flex-1 flex justify-end items-end gap-16 max-lg:hidden pr-12">
             {navLinks.map((item) => (
               <li key={item.label} className="hover:text-orange-500 ">
@@ -51,7 +51,7 @@ const Nav = () => {
         </div>
       </nav>
       {isOpenMenu && (
-        <div className="absolute mt-5 pl-5 top-20 left-0 w-full bg-[#354a64] rounded-lg shadow-lg">
+        <div className="absolute mt-5 pl-5 top-20 left-0 w-full bg-[#1E2D3B] rounded-lg shadow-lg">
           <ul className="flex flex-col gap-2 py-4">
             {navLinks.map((item) => (
               <li key={item.label}>

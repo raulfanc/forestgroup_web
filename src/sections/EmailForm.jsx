@@ -43,8 +43,10 @@ const EmailForm = () => {
     });
   };
 
+  /* above are format for emailjs */
+
   return (
-    <div className="mt-9 flex items-center justify-center bg-gray-100">
+    <div className="mt-9 flex items-center justify-center bg-pale-800">
       <div className="max-w-lg w-full">
         <h2 className="text-3xl font-bold text-[#354a64] text-center mb-4">
           Contact Us
