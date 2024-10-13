@@ -8,7 +8,7 @@ const AboutUsDetail = () => {
           <img
             src={location}
             alt="image.png"
-            className="w-full h-auto object-cover  max-w-[66%]"
+            className="w-full h-auto object-cover  max-w-[61%]"
           />
         </div>
         <div className="flex flex-col justify-center bg-white p-6">

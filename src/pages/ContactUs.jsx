@@ -6,8 +6,8 @@ import EmailForm from "../sections/EmailForm";
 const ContactUs = () => {
   return (
     <Layout>
-      <section className=" xl:padding-1 wide:padding-r padding-b pt-1">
-        <Background />
+      <section className="xl:padding-1 wide:padding-r padding-b pt-20">
+        {/* <Background /> */}
         <EmailForm />
       </section>
     </Layout>

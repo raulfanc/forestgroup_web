@@ -39,8 +39,8 @@ import AboutUsDetail from "../sections/AboutUsDetail";
 const AboutUs = () => {
   return (
     <Layout>
-      <section className=" xl:padding-1 wide:padding-r padding-b pt-1">
-        <Background />
+      <section className=" xl:padding-1 wide:padding-r padding-b pt-32">
+      {/* <Background /> */}
         <AboutUsDetail />
         <div className="flex justify-evenly gap-x-2 mt-12 ">
           <div>

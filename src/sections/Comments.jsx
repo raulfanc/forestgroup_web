@@ -27,6 +27,7 @@ const Comments = () => {
 
     return () => clearInterval(interval);
   }, []);
+
   return (
     <div className="relative w-full h-48 flex justify-center items-center bg-gray-50">
       <div className="w-3/4 md:w-1/2 text-center">

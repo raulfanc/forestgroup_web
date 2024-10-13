@@ -43,25 +43,22 @@ const EmailForm = () => {
     });
   };
 
-  /* above are format for emailjs */
-
   return (
-    <div className="mt-9 flex items-center justify-center bg-pale-800">
-      <div className="max-w-lg w-full">
-        <h2 className="text-3xl font-bold text-[#354a64] text-center mb-4">
+    <div className="flex items-center justify-center bg-gray-50 py-16 px-4 sm:px-6 lg:px-8">
+      <div className="max-w-xl w-full bg-white p-8 rounded-lg shadow-md">
+        <h2 className="text-4xl font-bold text-center text-gray-800 mb-6">
           Contact Us
         </h2>
-        <form
-          className="bg-white p-8 rounded-lg shadow-lg space-y-6"
-          onSubmit={handleOnSubmit}
-        >
-          <h2 className="text-2xl font-bold text-gray-800 text-center mb-4">
-            Send me a message. Let's have a chat!
-          </h2>
-
-          <div className="flex space-x-4">
-            <div className="flex flex-col w-1/2">
-              <label className="text-gray-700 font-semibold">First Name</label>
+        <p className="text-center text-gray-600 mb-8">
+          We'd love to hear from you. Please fill out the form below and we'll
+          get in touch soon.
+        </p>
+        <form onSubmit={handleOnSubmit}>
+          <div className="flex flex-wrap -mx-2 mb-4">
+            <div className="w-full md:w-1/2 px-2 mb-4 md:mb-0">
+              <label className="block text-gray-700 font-semibold mb-2">
+                First Name
+              </label>
               <input
                 type="text"
                 name="firstName"
@@ -70,11 +67,13 @@ const EmailForm = () => {
                 onChange={handleChange}
                 placeholder="Your first name..."
                 required
-                className="p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-400"
+                className="p-3 w-full border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-indigo-500 shadow-sm"
               />
             </div>
-            <div className="flex flex-col w-1/2">
-              <label className="text-gray-700 font-semibold">Last Name</label>
+            <div className="w-full md:w-1/2 px-2">
+              <label className="block text-gray-700 font-semibold mb-2">
+                Last Name
+              </label>
               <input
                 type="text"
                 name="lastName"
@@ -83,13 +82,15 @@ const EmailForm = () => {
                 onChange={handleChange}
                 placeholder="Your last name..."
                 required
-                className="p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-400"
+                className="p-3 w-full border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-indigo-500 shadow-sm"
               />
             </div>
           </div>
 
-          <div className="flex flex-col">
-            <label className="text-gray-700 font-semibold">Email</label>
+          <div className="mb-4">
+            <label className="block text-gray-700 font-semibold mb-2">
+              Email
+            </label>
             <input
               type="email"
               name="from_email"
@@ -98,12 +99,14 @@ const EmailForm = () => {
               autoComplete="off"
               placeholder="Your email..."
               required
-              className="p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-400"
+              className="p-3 w-full border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-indigo-500 shadow-sm"
             />
           </div>
 
-          <div className="flex flex-col">
-            <label className="text-gray-700 font-semibold">Message</label>
+          <div className="mb-6">
+            <label className="block text-gray-700 font-semibold mb-2">
+              Message
+            </label>
             <textarea
               name="message"
               rows="5"
@@ -111,7 +114,7 @@ const EmailForm = () => {
               onChange={handleChange}
               placeholder="Your message..."
               required
-              className="p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-400 resize-none"
+              className="p-3 w-full border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-indigo-500 shadow-sm resize-none"
             ></textarea>
           </div>
 
@@ -119,8 +122,8 @@ const EmailForm = () => {
 
           <button
             type="submit"
-            className="w-full bg-indigo-600 text-white font-semibold py-3 rounded-lg hover:bg-indigo-700 transition-colors"
-          >
+            className="w-full py-3 bg-[#EDCD1F] text-[#000000] font-semibold rounded-md shadow-lg hover:bg-[#D4B017] focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 transition ease-in-out duration-300"
+            >
             Submit
           </button>
         </form>
