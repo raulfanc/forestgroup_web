@@ -44,19 +44,19 @@ const EmailForm = () => {
   };
 
   return (
-    <div className="flex items-center justify-center bg-gray-50 py-16 px-4 sm:px-6 lg:px-8">
-      <div className="max-w-xl w-full bg-white p-8 rounded-lg shadow-md">
-        <h2 className="text-4xl font-bold text-center text-gray-800 mb-6">
+    <div className="flex items-center justify-center bg-[#FFFFFF] py-16 px-4 sm:px-6 lg:px-8">
+      <div className="max-w-xl w-full bg-[#1E2D3B] p-8 rounded-lg shadow-md">
+        <h2 className="text-4xl font-bold text-center text-[#ffffff] mb-6">
           Contact Us
         </h2>
-        <p className="text-center text-gray-600 mb-8">
+        <p className="text-center text-[#ffffff] mb-8">
           We'd love to hear from you. Please fill out the form below and we'll
           get in touch soon.
         </p>
         <form onSubmit={handleOnSubmit}>
           <div className="flex flex-wrap -mx-2 mb-4">
             <div className="w-full md:w-1/2 px-2 mb-4 md:mb-0">
-              <label className="block text-gray-700 font-semibold mb-2">
+              <label className="block text-[#ffffff] font-semibold mb-2">
                 First Name
               </label>
               <input
@@ -71,7 +71,7 @@ const EmailForm = () => {
               />
             </div>
             <div className="w-full md:w-1/2 px-2">
-              <label className="block text-gray-700 font-semibold mb-2">
+              <label className="block text-[#ffffff] font-semibold mb-2">
                 Last Name
               </label>
               <input
@@ -88,7 +88,7 @@ const EmailForm = () => {
           </div>
 
           <div className="mb-4">
-            <label className="block text-gray-700 font-semibold mb-2">
+            <label className="block text-[#ffffff] font-semibold mb-2">
               Email
             </label>
             <input
@@ -104,7 +104,7 @@ const EmailForm = () => {
           </div>
 
           <div className="mb-6">
-            <label className="block text-gray-700 font-semibold mb-2">
+            <label className="block text-[#ffffff] font-semibold mb-2">
               Message
             </label>
             <textarea

@@ -12,7 +12,7 @@ const AboutUsDetail = () => {
           />
         </div>
         <div className="flex flex-col justify-center bg-white p-6">
-          <h2 className="text-3xl font-bold text-[#354a64] mb-4">ABOUT</h2>
+          <h2 className="text-3xl font-bold text-[#354a64] mb-4">ABOUT US</h2>
           <p className="text-lg text-gray-700">
             <span className="font-bold">Forest Group</span> specialises in civil
             construction projects ranging from small residential subdivision,

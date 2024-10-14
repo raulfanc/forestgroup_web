@@ -26,7 +26,7 @@ const projects = [
     images: [background3, background4, background5],
   },
   {
-    title: "Earthworks",
+    title: "Earthwork",
     images: [background6, background7, background8],
   },
   {

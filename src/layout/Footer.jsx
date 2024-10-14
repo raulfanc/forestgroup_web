@@ -13,9 +13,9 @@ const Footer = () => {
             <p className="text-sm text-gray-300">
               Building a sustainable future together.
             </p>
-            <p className="text-md font-semibold text-yellow-400">
-              Serving <span className="font-bold text-white">Auckland</span> and{" "}
-              <span className="font-bold text-white">Christchurch</span>.
+            <p className="text-md font-semibold text-white">
+              Serving <span className="font-bold text-yellow-400">Auckland</span> and{" "}
+              <span className="font-bold text-yellow-400">Christchurch</span>.
             </p>
           </div>
 
@@ -44,7 +44,7 @@ const Footer = () => {
                 <span className="text-white text-md">cuxt009</span>
               </div>
               <div className="flex items-center justify-center md:justify-start">
-                <FaPhoneAlt className="mr-2 text-red-500" />
+                <FaPhoneAlt className="mr-2 text-[#f5d430]" />
                 <span className="text-white text-md">0220899308 | 0211065271</span>
               </div>
             </div>
