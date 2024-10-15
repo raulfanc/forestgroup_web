@@ -37,7 +37,7 @@ const AboutUsDetail = () => {
     //       <img
     //         src={nz_map}
     //         alt="NZ Map"
-    //         className="h-auto object-cover max-w-[61%] lg:max-w-[80%] lg:relative"
+    //         className="h-auto object-cover max-w-[50%] lg:max-w-[80%] lg:relative"
     //       />
     //     </div>
     //     <div className="lg:absolute lg:inset-0 lg:flex lg:items-center lg:justify-center">
@@ -62,10 +62,14 @@ const AboutUsDetail = () => {
     // </section>
 
     // text on the right
-    <section className="py-3 px-4 max-w-screen-xl mx-auto">
+    <section className="py-3 px-4 max-w-screen-xl mx-auto m-16">
       <div className="grid grid-cols-1 lg:grid-cols-10 gap-4">
         <div className="lg:col-start-1 lg:col-span-3 flex items-center justify-center">
-          <img src={nz_map} alt="location" className="h-auto object-cover" />
+          <img
+            src={nz_map}
+            alt="location"
+            className="h-auto object-cover max-w-[50%] lg:max-w-[80%] lg:relative"
+          />
         </div>
         <div className=" lg:col-start-4 lg:col-span-6 flex flex-col justify-center bg-[#1E2D3B] bg-opacity-60 text-white rounded-lg p-6">
           <h2 className="text-3xl font-bold mb-4">ABOUT US</h2>
