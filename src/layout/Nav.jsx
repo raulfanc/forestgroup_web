@@ -77,6 +77,8 @@ const Nav = () => {
 
     <header className="fixed z-10 w-full">
       <nav className="flex items-center justify-between bg-white p-2">
+        {/* for colored backgground for nav bar */}
+        {/* <nav className="flex items-center justify-between bg-[#eae0d5] p-2"> */}
         <div className="flex items-center">
           <NavLink to="/">
             <img src={logo2} alt="Logo" className="max-w-[240px] h-auto" />
