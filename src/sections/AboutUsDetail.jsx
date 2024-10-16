@@ -1,5 +1,5 @@
 import React from 'react'
-import { location, logo, nz_map } from '../assets/images'
+import { location, logo, nz_map, map2, map3, map4 } from '../assets/images'
 const AboutUsDetail = () => {
   return (
     // original
@@ -66,9 +66,9 @@ const AboutUsDetail = () => {
       <div className="grid grid-cols-1 lg:grid-cols-10 gap-4">
         <div className="lg:col-start-1 lg:col-span-3 flex items-center justify-center">
           <img
-            src={nz_map}
+            src={map2}
             alt="location"
-            className="h-auto object-cover max-w-[50%] lg:max-w-[80%] lg:relative"
+            className="w-[300px] h-auto object-cover lg:max-w-full lg:relative"
           />
         </div>
         <div className=" lg:col-start-4 lg:col-span-6 flex flex-col justify-center bg-[#1E2D3B] bg-opacity-60 text-white rounded-lg p-6">

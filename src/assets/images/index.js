@@ -25,6 +25,9 @@ import company3 from './company3.png'
 import nz_map from './nz_map.png'
 import nz_map_name from './nz_map_name.png'
 import logo2 from './logo2.png'
+import map2 from './map2.png'
+import map3 from './map3.png'
+import map4 from './map4.png'
 
 export {
   logo,
@@ -54,4 +57,7 @@ export {
   nz_map,
   nz_map_name,
   logo2,
+  map2,
+  map3,
+  map4,
 }
