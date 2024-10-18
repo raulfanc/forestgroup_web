@@ -4,7 +4,7 @@ import { navLinks } from '../constants'
 import { IoMenu } from 'react-icons/io5'
 import { IoClose } from 'react-icons/io5'
 import { NavLink } from 'react-router-dom'
-import { logo2 } from '../assets/images'
+import { logo2, logo3 } from '../assets/images'
 
 const Nav = () => {
   const [isOpenMenu, setIsOpenMenu] = useState(false)
@@ -75,13 +75,18 @@ const Nav = () => {
     //   )}
     // </header>
 
+    // beige or white nav bar
     <header className="fixed z-10 w-full">
       {/* <nav className="flex items-center justify-between bg-white p-2"> */}
       {/* for colored backgground for nav bar */}
       <nav className="flex items-center justify-between bg-[#eae0d5] p-2">
         <div className="flex items-center">
           <NavLink to="/">
-            <img src={logo2} alt="Logo" className="max-w-[240px] h-auto" />
+            <img src={logo3} alt="Logo" className="max-w-[110px] h-auto pl-8" />
+          </NavLink>
+          <NavLink to="/">
+            {' '}
+            <span className="font-audiowide pl-4">FOREST GROUP</span>
           </NavLink>
         </div>
 
@@ -92,7 +97,7 @@ const Nav = () => {
                 <NavLink
                   to={item.href}
                   className={({ isActive }) =>
-                    `font-sans text-lg ${
+                    `font-audiowide  ${
                       isActive ? 'text-orange-500' : 'text-black'
                     }`
                   }

@@ -25,6 +25,7 @@ import company3 from './company3.png'
 import nz_map from './nz_map.png'
 import nz_map_name from './nz_map_name.png'
 import logo2 from './logo2.png'
+import logo3 from './logo_only.png'
 import map2 from './map2.png'
 import map3 from './map3.png'
 import map4 from './map4.png'
@@ -46,6 +47,7 @@ import _background17 from './_background17.png'
 import _background18 from './_background18.png'
 import _background19 from './_background19.png'
 import _background20 from './_background20.png'
+import logo_only from './logo_only.svg'
 
 export {
   logo,
@@ -75,6 +77,7 @@ export {
   nz_map,
   nz_map_name,
   logo2,
+  logo3,
   map2,
   map3,
   map4,
@@ -96,4 +99,5 @@ export {
   _background18,
   _background19,
   _background20,
+  logo_only,
 }

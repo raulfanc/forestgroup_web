@@ -6,6 +6,7 @@ export default {
       fontFamily: {
         sans: ['Arial', 'Roboto', 'Montserrat', 'Palanquin', 'sans-serif'],
         mono: ['Courier New', 'Menlo', 'Monaco', 'Consolas', 'monospace'],
+        audiowide: ['Audiowide', 'sans-serif'],
       },
       animation: {
         fadeInOut: 'fadeInOut 10s ease-in-out infinite',
