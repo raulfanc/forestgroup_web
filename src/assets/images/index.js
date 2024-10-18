@@ -28,6 +28,24 @@ import logo2 from './logo2.png'
 import map2 from './map2.png'
 import map3 from './map3.png'
 import map4 from './map4.png'
+import _background3 from './_background3.png'
+import _background4 from './_background4.png'
+import _background5 from './_background5.png'
+import _background6 from './_background6.png'
+import _background7 from './_background7.png'
+import _background8 from './_background8.png'
+import _background9 from './_background9.png'
+import _background10 from './_background10.png'
+import _background11 from './_background11.png'
+import _background12 from './_background12.png'
+import _background13 from './_background13.png'
+import _background14 from './_background14.png'
+import _background15 from './_background15.png'
+import _background16 from './_background16.png'
+import _background17 from './_background17.png'
+import _background18 from './_background18.png'
+import _background19 from './_background19.png'
+import _background20 from './_background20.png'
 
 export {
   logo,
@@ -60,4 +78,22 @@ export {
   map2,
   map3,
   map4,
+  _background3,
+  _background4,
+  _background5,
+  _background6,
+  _background7,
+  _background8,
+  _background9,
+  _background10,
+  _background11,
+  _background12,
+  _background13,
+  _background14,
+  _background15,
+  _background16,
+  _background17,
+  _background18,
+  _background19,
+  _background20,
 }
