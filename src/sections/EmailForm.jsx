@@ -1,6 +1,6 @@
 import emailjs from 'emailjs-com'
 import React, { useState } from 'react'
-
+import CenteredAlert from "../components/CenteredAlert"; 
 const TEMPLATE_ID = import.meta.env.VITE_TEMPLATE_ID
 const SERVICE_ID = import.meta.env.VITE_SERVICE_ID
 const PUBLIC_KEY = import.meta.env.VITE_PUBLIC_KEY
@@ -12,6 +12,8 @@ const EmailForm = () => {
     from_email: '',
     message: '',
   })
+
+  const [alert, setAlert] = useState(null); 
 
   const handleChange = (e) => {
     const { name, value } = e.target
@@ -26,14 +28,18 @@ const EmailForm = () => {
 
     emailjs.sendForm(SERVICE_ID, TEMPLATE_ID, e.target, PUBLIC_KEY).then(
       (result) => {
-        console.log(result.text)
-        alert('Message Sent Successfully')
+        setAlert({
+          type: "success",
+          message: "Message Sent Successfully",
+        });
       },
       (error) => {
-        console.log(error.text)
-        alert('Something went wrong!')
+        setAlert({
+          type: "error",
+          message: "Message failed to be sent due to an unknown error",
+        });
       }
-    )
+    );
     e.target.reset()
     setFormData({
       firstName: '',
@@ -136,6 +142,15 @@ const EmailForm = () => {
           We'd love to hear from you. Please fill out the form below and we'll
           get in touch soon.
         </p>
+        
+        {alert && (
+          <CenteredAlert
+            message={alert.message}
+            type={alert.type}
+            onClose={() => setAlert(null)} 
+            duration={2000} 
+          />
+        )}
         <form onSubmit={handleOnSubmit}>
           <div className="flex flex-wrap -mx-2 mb-4">
             <div className="w-full md:w-1/2 px-2 mb-4 md:mb-0">
