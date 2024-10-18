@@ -197,7 +197,7 @@ const EmailForm = () => {
 
           <button
             type="submit"
-            className="w-full py-3 bg-[#584a41] text-[#ffffff] font-semibold rounded-md shadow-lg hover:bg-[#D4B017] focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 transition ease-in-out duration-300"
+            className="w-full py-3 bg-[#584a41] text-[#ffffff] font-semibold rounded-md shadow-lg hover:bg-[#7a6857] focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 transition ease-in-out duration-300"
           >
             Submit
           </button>
