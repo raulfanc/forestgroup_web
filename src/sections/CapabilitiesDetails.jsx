@@ -6,7 +6,7 @@ const CapabilitiesDetails = () => {
     {
       title: "Early Contractor Involvement (ECI)",
       description:
-        "We offer ECI service to Clients that study sites during the pre-development stage. We have pragmatic lens that can advise Clients to look out for critical issues that define the project feasibility.",
+        "We offer ECI service to Clients where we analyse sites during the pre-development stage. We apply our pragmatic lenses to identify critical issues that define the project feasibility for Clients.",
       icon: <FaBuilding className="text-5xl text-indigo-600" />,
       bgColor: "bg-indigo-100",
     },
@@ -27,7 +27,7 @@ const CapabilitiesDetails = () => {
     {
       title: "Civil Construction",
       description:
-        "Our team has vast experience with Tier 1 Contractors and has built core competencies in managing a wide range of civil construction techniques.",
+        "Our team has extensive experience with Tier 1 Contractors and has built core competencies in managing a wide range of civil construction projects.",
       icon: <FaHardHat className="text-5xl text-red-600" />,
       bgColor: "bg-red-100",
     },

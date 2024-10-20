@@ -91,7 +91,7 @@ const Footer = () => {
                 <span className=" text-md">cuxt009</span>
               </div>
               <div className="flex items-center justify-center md:justify-start">
-                <FaPhoneAlt className="mr-2 text-red-500" />
+                <FaPhoneAlt className="mr-2 text-[#f9c938]" />
                 <span className=" text-md">0220899308 | 0211065271</span>
               </div>
             </div>

@@ -15,7 +15,7 @@ const content = (
     </div>
 
     <div className="absolute bottom-8 right-8">
-      <Button label="Contact Us" phoneNumber="0220899308" icon={<FaPhone />} />
+      <Button label="Call Us Now" phoneNumber="0220899308" icon={<FaPhone />} />
     </div>
   </div>
 );
