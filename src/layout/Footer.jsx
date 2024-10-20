@@ -58,9 +58,10 @@ const Footer = () => {
 
     <footer className="bg-[#eae0d5] py-8">
       <div className="max-w-screen-xl mx-auto px-4">
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
+        {/* <div className="grid grid-cols-1 md:grid-cols-3 gap-10"> */}
+        <div className="md:flex md:justify-between">
           {/* Left Section - Company Info */}
-          <div className="flex flex-col space-y-3 text-center md:text-left">
+          <div className="space-y-2 text-center md:text-left">
             <h2 className="text-3xl font-bold">Forest Group</h2>
             <p className="text-sm text-[#584a41]">
               Building a sustainable future together.
@@ -72,18 +73,15 @@ const Footer = () => {
             </p>
           </div>
 
-          {/* Middle Section - keep it blank */}
-          <div className="flex flex-col space-y-6 text-center md:text-left"></div>
-
           {/* Right Section - Contact Info */}
-          <div className="flex flex-col space-y-6 text-center md:text-left">
+          <div className="pt-8 space-y-2 text-center md:text-left md:pt-0 ">
             <h3 className="text-xl font-bold">Contact: Shawn Fei</h3>
-            <div className="space-y-3">
+            <div className="space-y-2">
               <div className="flex items-center justify-center md:justify-start">
                 <FaEnvelope className="mr-2 text-blue-400" />
                 <a
                   href="mailto:forestgroupwork@gmail.com"
-                  className=" hover:text-[#085332] transition-colors text-md"
+                  className="hover:text-[#085332] transition-colors text-md"
                 >
                   forestgroupwork@gmail.com
                 </a>
@@ -102,13 +100,16 @@ const Footer = () => {
         {/* CTA */}
         <div className="text-center mt-8">
           <p className="text-lg text-[#584a41]">
-            Ready to build a sustainable future?{' '}
-            <a
-              href="/contact-us"
-              className="text-[#085332] hover:text-white transition-colors"
-            >
-              Get in touch with us!
-            </a>
+            Ready to build a sustainable future?
+            <span className="block sm:inline">
+              {' '}
+              <a
+                href="/contact-us"
+                className="text-[#085332] hover:text-[#073e29] transition-colors"
+              >
+                Get in touch with us!
+              </a>
+            </span>
           </p>
         </div>
       </div>

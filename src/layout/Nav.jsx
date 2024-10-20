@@ -79,7 +79,7 @@ const Nav = () => {
     <header className="fixed z-10 w-full">
       {/* <nav className="flex items-center justify-between bg-white p-2"> */}
       {/* for colored backgground for nav bar */}
-      <nav className="flex items-center justify-between bg-[#eae0d5] p-2">
+      <nav className="shadow-md flex items-center justify-between bg-[#eae0d5] p-2 ">
         <div className="flex items-center">
           <NavLink to="/">
             <img src={logo3} alt="Logo" className="max-w-[110px] h-auto pl-8" />
@@ -93,12 +93,12 @@ const Nav = () => {
         <div className="flex items-center space-x-4">
           <ul className="flex-1 flex justify-end items-end gap-16 max-lg:hidden pr-12">
             {navLinks.map((item) => (
-              <li key={item.label} className="hover:text-orange-500 ">
+              <li key={item.label} className="hover:text-[#085332] ">
                 <NavLink
                   to={item.href}
                   className={({ isActive }) =>
                     `font-audiowide  ${
-                      isActive ? 'text-orange-500' : 'text-black'
+                      isActive ? 'text-[#085332]' : 'text-black'
                     }`
                   }
                 >
@@ -120,16 +120,16 @@ const Nav = () => {
         </div>
       </nav>
       {isOpenMenu && (
-        <div className="absolute mt-5 pl-5 top-20 left-0 w-full bg-[#1E2D3B] rounded-lg shadow-lg">
-          <ul className="flex flex-col gap-2 py-4">
+        <div className="mt-4 absolute top-20 left-0 w-full bg-[#eae0d5] transition-colors rounded-lg shadow-lg">
+          <ul>
             {navLinks.map((item) => (
               <li key={item.label}>
                 <NavLink
                   to={item.href}
                   className={({ isActive }) =>
-                    `font-montserrat text-lg p-2 block transition-colors duration-200 ${
-                      isActive ? 'text-orange-500' : 'text-slate-100'
-                    } hover:bg-blue-700 rounded-lg`
+                    `shadow-lg text-lg pl-8 pb-2 pt-2 block transition-colors duration-200 ${
+                      isActive ? 'text-[#085332]' : 'text-black'
+                    } hover:bg-[#d6c6b9] rounded-lg`
                   }
                   onClick={() => setIsOpenMenu(false)}
                 >
