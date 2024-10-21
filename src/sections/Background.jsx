@@ -7,19 +7,10 @@ const Background = ({ content }) => {
   const videoRef = useRef(null);
 
   useEffect(() => {
-    const isWeChatBrowser = () => {
-      return /MicroMessenger/i.test(window.navigator.userAgent);
-    };
+    // 检测是否为微信浏览器
+    const isWeChatBrowser = () => /MicroMessenger/i.test(window.navigator.userAgent);
 
-    if (isWeChatBrowser()) {
-      wx.ready(() => {
-        if (videoRef.current) {
-          videoRef.current.play();
-        }
-      });
-    }
-
-    // Video loaded event listener
+    // 视频加载完成时触发
     const handleLoadedData = () => {
       setIsVideoLoaded(true);
     };
@@ -27,15 +18,25 @@ const Background = ({ content }) => {
     const videoElement = videoRef.current;
     if (videoElement) {
       videoElement.addEventListener("loadeddata", handleLoadedData);
+
+      // 如果是微信浏览器，使用微信JS-SDK确保自动播放
+      if (isWeChatBrowser()) {
+        wx.ready(() => {
+          videoElement.play();
+        });
+      }
     }
 
-    // Cleanup event listener
+    // 清理事件监听
     return () => {
       if (videoElement) {
         videoElement.removeEventListener("loadeddata", handleLoadedData);
       }
     };
   }, []);
+
+  // 判断是否是微信浏览器
+  const isWeChatBrowser = /MicroMessenger/i.test(window.navigator.userAgent);
 
   return (
     <section className="relative mt-20 w-full h-[500px] overflow-hidden">
@@ -46,7 +47,7 @@ const Background = ({ content }) => {
           isVideoLoaded ? "opacity-100" : "opacity-0"
         }`}
         src={videoBackground}
-        autoPlay
+        autoPlay={!isWeChatBrowser}
         loop
         muted
         playsInline
