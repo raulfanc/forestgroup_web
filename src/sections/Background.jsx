@@ -1,6 +1,6 @@
 import React, { useEffect, useRef, useState } from "react";
 import videoBackground from "../assets/videos/background2.mp4";
-import { useLocation, useNavigate } from "react-router-dom";
+import { useNavigate, useLocation } from "react-router-dom";
 
 const Background = ({ content }) => {
   const [isVideoLoaded, setIsVideoLoaded] = useState(false);
@@ -12,12 +12,20 @@ const Background = ({ content }) => {
     // 检测是否是微信浏览器
     const isWeChatBrowser = () => /MicroMessenger/i.test(window.navigator.userAgent);
 
-    // 当页面首次加载时跳转到其他页面并回来
-    if (isWeChatBrowser() && !location.search.includes('redirected=true')) {
-      // 跳转到 About 页面，附加查询参数 redirected=true，避免无限循环
-      navigate('/about-us?redirected=true');
+    // 判断是否是第一次加载
+    const hasRedirected = localStorage.getItem('hasRedirected');
+
+    if (isWeChatBrowser() && !hasRedirected) {
+      // 第一次访问主页，跳转到任意页面（例如 /about-us）
+      localStorage.setItem('hasRedirected', 'true'); // 设置已跳转标记
+      navigate('/about-us'); // 跳转到其他页面
+    } else if (location.pathname === '/about-us') {
+      // 如果当前页面是 about-us，返回到主页
+      setTimeout(() => {
+        navigate('/'); // 自动返回主页
+      }, 1000); // 1秒延迟后返回主页
     } else {
-      // 如果已经重定向过，继续加载视频
+      // 视频加载事件监听器
       const handleLoadedData = () => {
         setIsVideoLoaded(true);
       };
@@ -38,7 +46,7 @@ const Background = ({ content }) => {
 
   return (
     <section className="relative mt-20 w-full h-[500px] overflow-hidden">
-      {/* Video Background */}
+      {/* 视频背景 */}
       <video
         ref={videoRef}
         className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-1000 ${
@@ -52,7 +60,7 @@ const Background = ({ content }) => {
         preload="auto"
       />
 
-      {/* Content Over the Video */}
+      {/* 视频上的内容 */}
       <div className="relative z-4 h-full text-white flex items-center justify-center lg:justify-start px-8">
         {content && content}
       </div>
