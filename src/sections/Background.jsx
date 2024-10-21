@@ -41,7 +41,7 @@ const Background = ({ content }) => {
       />
 
       {/* Content Over the Video */}
-      <div className="relative z-4 h-full text-white flex items-center justify-center lg:justify-start px-8">
+      <div className="relative z-4 h-full text-white flex items-center justify-center lg:justify-start px-8 sm:px-1">
         {content && content}
       </div>
     </section>
