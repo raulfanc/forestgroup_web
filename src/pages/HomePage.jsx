@@ -8,7 +8,7 @@ import { FaPhone } from "react-icons/fa";
 const content = (
   <div className="relative h-full text-white grid grid-rows-1 grid-cols-1">
     <div className="flex items-start justify-center p-12 row-start-1 col-start-1">
-      <h1 className="mt-8 text-center text-xl sm:text-4xl lg:text-5xl leading-tight sm:leading-normal lg:leading-normal px-4 sm:px-0 bg-black bg-opacity-40 p-4 rounded-md lg:bg-transparent">
+      <h1 className="mt-8 text-center text-2xl sm:text-4xl lg:text-5xl leading-tight sm:leading-normal lg:leading-normal px-4 sm:px-0 bg-black bg-opacity-40 p-4 rounded-md lg:bg-transparent">
       Complex civil specialist, we deliver efficiency and quality to your
         projects.
       </h1>
