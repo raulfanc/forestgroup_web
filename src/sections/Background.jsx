@@ -1,12 +1,25 @@
 import React, { useEffect, useRef, useState } from "react";
 import videoBackground from "../assets/videos/background2.mp4";
+import wx from 'weixin-js-sdk'; 
 
 const Background = ({ content }) => {
   const [isVideoLoaded, setIsVideoLoaded] = useState(false);
   const videoRef = useRef(null);
 
   useEffect(() => {
-    // Event listener to determine when the video has loaded enough to start playing
+    const isWeChatBrowser = () => {
+      return /MicroMessenger/i.test(window.navigator.userAgent);
+    };
+
+    if (isWeChatBrowser()) {
+      wx.ready(() => {
+        if (videoRef.current) {
+          videoRef.current.play();
+        }
+      });
+    }
+
+    // Video loaded event listener
     const handleLoadedData = () => {
       setIsVideoLoaded(true);
     };
@@ -16,7 +29,7 @@ const Background = ({ content }) => {
       videoElement.addEventListener("loadeddata", handleLoadedData);
     }
 
-    // Cleanup event listener when component unmounts
+    // Cleanup event listener
     return () => {
       if (videoElement) {
         videoElement.removeEventListener("loadeddata", handleLoadedData);
