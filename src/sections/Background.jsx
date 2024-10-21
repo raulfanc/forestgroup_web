@@ -1,28 +1,40 @@
 import React, { useEffect, useRef, useState } from "react";
 import videoBackground from "../assets/videos/background2.mp4";
+import { useLocation, useNavigate } from "react-router-dom";
 
 const Background = ({ content }) => {
   const [isVideoLoaded, setIsVideoLoaded] = useState(false);
   const videoRef = useRef(null);
+  const navigate = useNavigate();
+  const location = useLocation();
 
   useEffect(() => {
-    // Event listener to determine when the video has loaded enough to start playing
-    const handleLoadedData = () => {
-      setIsVideoLoaded(true);
-    };
+    // 检测是否是微信浏览器
+    const isWeChatBrowser = () => /MicroMessenger/i.test(window.navigator.userAgent);
 
-    const videoElement = videoRef.current;
-    if (videoElement) {
-      videoElement.addEventListener("loadeddata", handleLoadedData);
-    }
+    // 当页面首次加载时跳转到其他页面并回来
+    if (isWeChatBrowser() && !location.search.includes('redirected=true')) {
+      // 跳转到 About 页面，附加查询参数 redirected=true，避免无限循环
+      navigate('/about-us?redirected=true');
+    } else {
+      // 如果已经重定向过，继续加载视频
+      const handleLoadedData = () => {
+        setIsVideoLoaded(true);
+      };
 
-    // Cleanup event listener when component unmounts
-    return () => {
+      const videoElement = videoRef.current;
       if (videoElement) {
-        videoElement.removeEventListener("loadeddata", handleLoadedData);
+        videoElement.addEventListener("loadeddata", handleLoadedData);
       }
-    };
-  }, []);
+
+      // 清理事件监听器
+      return () => {
+        if (videoElement) {
+          videoElement.removeEventListener("loadeddata", handleLoadedData);
+        }
+      };
+    }
+  }, [location, navigate]);
 
   return (
     <section className="relative mt-20 w-full h-[500px] overflow-hidden">
