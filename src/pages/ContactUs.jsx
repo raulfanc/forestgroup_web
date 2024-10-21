@@ -1,7 +1,7 @@
-import React from "react";
-import Layout from "../layout/Layout";
-import { Background } from "../sections";
-import EmailForm from "../sections/EmailForm";
+import React from 'react'
+import Layout from '../layout/Layout'
+// import { Background } from "../sections";
+import EmailForm from '../sections/EmailForm'
 
 const ContactUs = () => {
   return (
@@ -11,7 +11,7 @@ const ContactUs = () => {
         <EmailForm />
       </section>
     </Layout>
-  );
-};
+  )
+}
 
-export default ContactUs;
+export default ContactUs

@@ -2,6 +2,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Palanquin:wght@100;200;300;400;500;600;700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Audiowide&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,100..900;1,100..900&family=Orbitron:wght@400..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,100..900;1,100..900&family=Orbitron:wght@400..900&family=Syncopate:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,100..900;1,100..900&family=Orbitron:wght@400..900&family=Pathway+Gothic+One&family=Syncopate:wght@400;700&display=swap');
 
 @tailwind base;
 @tailwind components;
@@ -69,7 +73,11 @@
   h6 {
     /* @apply font-mono font-bold; */
     /* @apply font-sans font-bold; */
-    font-family: 'Audiowide', sans-serif;
+    /* font-family: 'Audiowide', sans-serif; */
+    /* font-family: 'Orbitron', sans-serif; */
+    /* font-family: 'Syncopate', sans-serif; */
+    font-family: 'Exo 2', sans-serif;
+    /* font-family: 'Pathway Gothic One', sans-serif; */
   }
 
   ul li.active {
