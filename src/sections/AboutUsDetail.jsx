@@ -1,5 +1,5 @@
 import React from 'react'
-import { location, logo, nz_map, map2, map3, map4 } from '../assets/images'
+import { location, logo, nz_map, map2, map2_svg } from '../assets/images'
 const AboutUsDetail = () => {
   return (
     // original
@@ -63,15 +63,15 @@ const AboutUsDetail = () => {
 
     // text on the right
     <section className="py-3 px-4 max-w-screen-xl mx-auto m-16">
-      <div className="grid grid-cols-1 lg:grid-cols-10 gap-4">
+      <div className="grid grid-cols-1 lg:grid-cols-10 gap-4 pb-4">
         <div className="lg:col-start-1 lg:col-span-3 flex items-center justify-center">
           <img
-            src={map2}
+            src={map2_svg}
             alt="location"
-            className="w-[300px] h-auto object-cover lg:max-w-full lg:relative"
+            className="w-[260px] h-auto object-cover lg:relative"
           />
         </div>
-        <div className=" lg:col-start-4 lg:col-span-6 flex flex-col justify-center bg-[#1E2D3B] bg-opacity-60 text-white rounded-lg p-6">
+        <div className=" lg:col-start-4 lg:col-span-6 flex flex-col justify-center bg-[#584a41] bg-opacity-60 text-white rounded-lg p-6">
           <h2 className="text-3xl font-bold mb-4">ABOUT US</h2>
           <p className="text-lg">
             <span className="font-bold">Forest Group</span> specialises in civil

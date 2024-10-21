@@ -62,7 +62,9 @@ const Footer = () => {
         <div className="md:flex md:justify-between">
           {/* Left Section - Company Info */}
           <div className="space-y-2 text-center md:text-left">
-            <h2 className="text-3xl font-bold">Forest Group</h2>
+            <h2 className="font-audiowide text-xl font-bold uppercase">
+              Forest Group
+            </h2>
             <p className="text-sm text-[#584a41]">
               Building a sustainable future together.
             </p>

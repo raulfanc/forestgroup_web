@@ -39,10 +39,10 @@ import AboutUsDetail from '../sections/AboutUsDetail'
 const AboutUs = () => {
   return (
     <Layout>
-      <section className=" xl:padding-1 wide:padding-r padding-b pt-32">
+      <section className=" xl:padding-1 wide:padding-r padding-b pt-24">
         {/* <Background /> */}
         <AboutUsDetail />
-        <div className="flex justify-evenly gap-x-2 mt-12 ">
+        <div className="flex justify-evenly gap-x-2">
           <div>
             <img src={company1} className="w-48" alt="image.png" />
           </div>
