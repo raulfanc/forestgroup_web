@@ -1,9 +1,22 @@
 import React, { useEffect, useRef, useState } from "react";
 import videoBackground from "../assets/videos/background2.mp4";
+import { background10 } from "../assets/images";
 
 const Background = ({ content }) => {
   const [isVideoLoaded, setIsVideoLoaded] = useState(false);
   const videoRef = useRef(null);
+
+  const isWeChatBrowser = () => {
+    const userAgent = navigator.userAgent.toLowerCase();
+    return /micromessenger/.test(userAgent);
+  };
+
+  const isMobile = () => {
+    const userAgent = navigator.userAgent.toLowerCase();
+    return /mobile|android|iphone|ipad/.test(userAgent);
+  };
+  // console.log(isWeChatBrowser());
+  // console.log(isMobile());
 
   useEffect(() => {
     // Event listener to determine when the video has loaded enough to start playing
@@ -26,19 +39,20 @@ const Background = ({ content }) => {
 
   return (
     <section className="relative mt-20 w-full h-[500px] overflow-hidden">
-      {/* Video Background */}
-      <video
-        ref={videoRef}
-        className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-1000 ${
-          isVideoLoaded ? "opacity-100" : "opacity-0"
-        }`}
-        src={videoBackground}
-        autoPlay
-        loop
-        muted
-        playsInline
-        preload="auto"
-      />
+      {(isWeChatBrowser() && isMobile()) ? (  <img src={background10} alt="" />  
+    ):(    <video
+      ref={videoRef}
+      className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-1000 ${
+        isVideoLoaded ? "opacity-100" : "opacity-0"
+      }`}
+      src={videoBackground}
+      autoPlay
+      loop
+      muted
+      playsInline
+      preload="auto"
+    />)}
+
 
       {/* Content Over the Video */}
       <div className="relative z-4 h-full text-white flex items-center justify-center lg:justify-start px-8">
