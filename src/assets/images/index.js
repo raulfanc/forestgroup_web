@@ -1,4 +1,5 @@
 import logo from './logo.svg'
+import background from './background.jpeg'
 import background2 from './background2.jpg'
 import background3 from './background3.png'
 import background4 from './background4.png'
@@ -53,6 +54,7 @@ import logo_only from './logo_only.svg'
 export {
   logo,
   location,
+  background,
   background2,
   background3,
   background4,

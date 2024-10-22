@@ -1,6 +1,6 @@
 import React, { useEffect, useRef, useState } from "react";
 import videoBackground from "../assets/videos/background2.mp4";
-import { background10 } from "../assets/images";
+import { background } from "../assets/images";
 
 const Background = ({ content }) => {
   const [isVideoLoaded, setIsVideoLoaded] = useState(false);
@@ -39,8 +39,13 @@ const Background = ({ content }) => {
 
   return (
     <section className="relative mt-20 w-full h-[500px] overflow-hidden">
-      {(isWeChatBrowser() && isMobile()) ? (  <img src={background10} alt="" />  
-    ):(    <video
+      {(isWeChatBrowser() && isMobile()) ? (       
+        <div>
+        <img className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-1000  }`} src={background} alt="" />  
+      </div> 
+    ):(    
+
+    <video
       ref={videoRef}
       className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-1000 ${
         isVideoLoaded ? "opacity-100" : "opacity-0"
@@ -51,10 +56,10 @@ const Background = ({ content }) => {
       muted
       playsInline
       preload="auto"
-    />)}
+    />
+    )}
 
 
-      {/* Content Over the Video */}
       <div className="relative z-4 h-full text-white flex items-center justify-center lg:justify-start px-8">
         {content && content}
       </div>
