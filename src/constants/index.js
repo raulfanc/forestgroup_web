@@ -1,7 +1,8 @@
 import HomePage from "../pages/HomePage";
 import AboutUs from "../pages/AboutUs";
 import Projects from "../pages/Projects";
-import ContactUs from "../pages/ContactUs";
+import ContactUs from "../pages/ContactUs"; 
+import TestPage from "../pages/TestPage"; 
 // import Capabilities from "../pages/Capabilities";
 
 export const navLinks = [
@@ -10,4 +11,5 @@ export const navLinks = [
   { href: "/about-us", label: "About Us", component: AboutUs },
   { href: "/projects", label: "Projects", component: Projects },
   { href: "/contact-us", label: "Contact Us", component: ContactUs },
+  { href: "/test", label: "Test", component: TestPage },
 ];
